@@ -4,7 +4,7 @@ pipeline{
     stages{
         stage('Hello'){
             steps{
-                echo 'Hello lipun'
+                echo 'Hello from feature branch'
             }
         }
     }
