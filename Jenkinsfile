@@ -1,12 +1,8 @@
 @Library('shared-libe') _
-pipeline{
-    agent any
-
-    stages{
-        stage('Hello'){
-            steps{
-                echo 'Hello from feature branch'
-            }
-        }
-    }
-}
+helloPipeline(
+    scmUrl: 'https://github.com/sunil1423/Multi-Branch.git',
+    branch: env.BRANCH_NAME,
+    appName: 'simple-hello',
+    gitCredId: 'git_ssh'
+    
+)
